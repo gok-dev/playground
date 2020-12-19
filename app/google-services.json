@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1022102466738",
+    "project_id": "playground-348d6",
+    "storage_bucket": "playground-348d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022102466738:android:63a3207c82335cda17d9ab",
+        "android_client_info": {
+          "package_name": "br.com.viniciuscoscia.playground"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1022102466738-707ucplfc5m6rtsth73qmh1eusadqgq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdYs-BMdpXpB81x34INEqVeCnAqJXFbEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1022102466738-707ucplfc5m6rtsth73qmh1eusadqgq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
