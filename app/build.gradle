@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'org.sonarqube' version '3.0'
     id 'jacoco'
 }
 
@@ -33,7 +34,7 @@ android {
     }
 }
 
-task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest']) {
+task jacocoTestReport(type: JacocoReport, dependsOn: ['test']) {
     reports {
         xml.enabled = true
     }
@@ -53,6 +54,15 @@ task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest']) {
             "jacoco/testDebugUnitTest.exec",
             "outputs/code-coverage/connected/*coverage.ec"
     ])
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "gok-dev_playground"
+        property"sonar.organization", "gok-dev"
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.coverage.jacoco.xmlReportPaths", "build/reports/jacoco/test/jacocoTestReport.xml"
+    }
 }
 
 dependencies {
