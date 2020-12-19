@@ -10,6 +10,7 @@ on:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -21,6 +22,7 @@ jobs:
         run: ./gradlew build
 
   test:
+    name: Test and Analyze
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -47,4 +49,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew test sonarqube
+        run: ./gradlew test jacocoTestReport sonarqube
